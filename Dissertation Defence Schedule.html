@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Dissertation Defense Scheduling - Greatness Olaitan</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f8f8f8; color: #232D4B; }
+        h1, h2, h3, h4 { color: #232D4B; }
+        .calendar-week { margin-bottom: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #232D4B; padding: 8px; text-align: center; }
+        th { background-color: #232D4B; color: white; }
+        .slot { cursor: pointer; background-color: white; }
+        .selected { background-color: #E57200; color: white; }
+        #selected-count { font-weight: bold; color: #E57200; }
+        #selected-times { margin-top: 20px; }
+        .note { font-style: italic; color: #888; }
+        button { background-color: #E57200; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+        button:hover { background-color: #232D4B; }
+        input { padding: 8px; width: 300px; border: 1px solid #232D4B; }
+    </style>
+</head>
+<body>
+    <h1>PhD Dissertation Defense Scheduling Coordination</h1>
+    <h2>Greatness Olaitan</h2>
+    <p>PhD Candidate, Chemistry Department<br>University of Virginia • Fall 2025</p>
+
+    <h3>Committee Members</h3>
+    <p>Dr. Stains, Dr. Lynch, Dr. Pires, Dr. Venton, and Dr. Ma</p>
+
+    <p>Thank you for participating in the scheduling coordination for My dissertation defense. Please select your available time slots from the calendar below. Multiple selections are encouraged to provide flexibility.</p>
+
+    <h3>Select Your Available Time Slots</h3>
+    <p>Click on time slots to mark your availability. Selected times will be highlighted in orange.</p>
+    <p><span id="selected-count">0</span> time slots selected</p>
+
+    <!-- Define time slots -->
+    <script>
+        const timeSlots = [
+            '9:00 AM - 11:00 AM',
+            '11:00 AM - 1:00 PM',
+            '1:00 PM - 3:00 PM',
+            '3:00 PM - 5:00 PM'
+        ];
+    </script>
+
+    <!-- Week 1: Nov 3-7 -->
+    <div class="calendar-week">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Nov 3 (Mon)</th>
+                <th>Nov 4 (Tue)</th>
+                <th>Nov 5 (Wed)</th>
+                <th>Nov 6 (Thu)</th>
+                <th>Nov 7 (Fri)</th>
+            </tr>
+            <script>
+                timeSlots.forEach(slot => {
+                    document.write('<tr><td>' + slot + '</td>');
+                    for (let i = 0; i < 5; i++) {
+                        document.write('<td class="slot" data-date="Nov ' + (3+i) + '" data-time="' + slot + '"></td>');
+                    }
+                    document.write('</tr>');
+                });
+            </script>
+        </table>
+    </div>
+
+    <!-- Week 2: Nov 10-14 -->
+    <div class="calendar-week">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Nov 10 (Mon)</th>
+                <th>Nov 11 (Tue)</th>
+                <th>Nov 12 (Wed)</th>
+                <th>Nov 13 (Thu)</th>
+                <th>Nov 14 (Fri)</th>
+            </tr>
+            <script>
+                timeSlots.forEach(slot => {
+                    document.write('<tr><td>' + slot + '</td>');
+                    for (let i = 0; i < 5; i++) {
+                        document.write('<td class="slot" data-date="Nov ' + (10+i) + '" data-time="' + slot + '"></td>');
+                    }
+                    document.write('</tr>');
+                });
+            </script>
+        </table>
+    </div>
+
+    <!-- Week 3: Nov 17-21 -->
+    <div class="calendar-week">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Nov 17 (Mon)</th>
+                <th>Nov 18 (Tue)</th>
+                <th>Nov 19 (Wed)</th>
+                <th>Nov 20 (Thu)</th>
+                <th>Nov 21 (Fri)</th>
+            </tr>
+            <script>
+                timeSlots.forEach(slot => {
+                    document.write('<tr><td>' + slot + '</td>');
+                    for (let i = 0; i < 5; i++) {
+                        document.write('<td class="slot" data-date="Nov ' + (17+i) + '" data-time="' + slot + '"></td>');
+                    }
+                    document.write('</tr>');
+                });
+            </script>
+        </table>
+    </div>
+
+    <!-- Week 4: Nov 24-26 -->
+    <div class="calendar-week">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Nov 24 (Mon)</th>
+                <th>Nov 25 (Tue)</th>
+                <th>Nov 26 (Wed)</th>
+            </tr>
+            <script>
+                timeSlots.forEach(slot => {
+                    document.write('<tr><td>' + slot + '</td>');
+                    for (let i = 0; i < 3; i++) {
+                        document.write('<td class="slot" data-date="Nov ' + (24+i) + '" data-time="' + slot + '"></td>');
+                    }
+                    document.write('</tr>');
+                });
+            </script>
+        </table>
+        <p class="note">Thanksgiving Week (Nov 27-28 excluded)</p>
+    </div>
+
+    <!-- Week 5: Dec 2-6 -->
+    <div class="calendar-week">
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Dec 2 (Mon)</th>
+                <th>Dec 3 (Tue)</th>
+                <th>Dec 4 (Wed)</th>
+                <th>Dec 5 (Thu)</th>
+                <th>Dec 6 (Fri)</th>
+            </tr>
+            <script>
+                timeSlots.forEach(slot => {
+                    document.write('<tr><td>' + slot + '</td>');
+                    for (let i = 0; i < 5; i++) {
+                        document.write('<td class="slot" data-date="Dec ' + (2+i) + '" data-time="' + slot + '"></td>');
+                    }
+                    document.write('</tr>');
+                });
+            </script>
+        </table>
+    </div>
+
+    <h3>Additional Information & Contact Details</h3>
+    <h4>Student Contact Information</h4>
+    <p>Greatness Olaitan<br>PhD Candidate, Chemistry Department<br>University of Virginia</p>
+    <p>Note: The dissertation abstract has been attached to the original email for your review.</p>
+
+    <h3>Committee Member Information</h3>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" placeholder="e.g., Dr. Stains" required><br><br>
+    <button onclick="submitAvailability()">Submit Availability</button>
+
+    <h4>Your Selected Available Times</h4>
+    <ul id="selected-times-list">
+        <li>No time slots selected yet. Please select your available times above.</li>
+    </ul>
+
+    <script>
+        let selectedCount = 0;
+        const selectedTimes = [];
+
+        document.querySelectorAll('.slot').forEach(slot => {
+            slot.addEventListener('click', () => {
+                slot.classList.toggle('selected');
+                const date = slot.dataset.date;
+                const time = slot.dataset.time;
+                const index = selectedTimes.findIndex(item => item.date === date && item.time === time);
+
+                if (slot.classList.contains('selected')) {
+                    if (index === -1) {
+                        selectedTimes.push({ date, time });
+                        selectedCount++;
+                    }
+                } else {
+                    if (index !== -1) {
+                        selectedTimes.splice(index, 1);
+                        selectedCount--;
+                    }
+                }
+
+                document.getElementById('selected-count').textContent = selectedCount;
+
+                // Update the list dynamically
+                const list = document.getElementById('selected-times-list');
+                list.innerHTML = '';
+                if (selectedTimes.length === 0) {
+                    const li = document.createElement('li');
+                    li.textContent = 'No time slots selected yet. Please select your available times above.';
+                    list.appendChild(li);
+                } else {
+                    selectedTimes.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = `${item.date} at ${item.time}`;
+                        list.appendChild(li);
+                    });
+                }
+            });
+        });
+
+        function submitAvailability() {
+            const name = document.getElementById('name').value.trim();
+            if (!name) {
+                alert('Please enter your name.');
+                return;
+            }
+            if (selectedCount === 0) {
+                alert('Please select at least one time slot.');
+                return;
+            }
+
+            // Prepare data to send
+            const data = {
+                name: name,
+                selectedTimes: selectedTimes
+            };
+
+            // Send to Google Apps Script web app
+            fetch('https://script.google.com/macros/s/AKfycbztkuShpRVCFlG-WfeZFEFjMlD0el0LcUvJ8cjvMDQn21tNCxts9FuLlmLokR_RhGEX/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data),
+                mode: 'no-cors'
+            })
+            .then(() => {
+                console.log('Submission sent (check your Google Sheet for the new row)');
+                alert(`Thank you, ${name}! Your availability has been submitted successfully.`);
+                // Optionally reset form here
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                alert('There was a network error submitting your availability. Please try again or contact the student.');
+            });
+        }
+    </script>
+</body>
+</html>
